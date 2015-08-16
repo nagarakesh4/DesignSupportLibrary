@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">DesignSupportLibrary-MD</string>
+    <string name="app_name">MD - Design Support</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="action_find_location">Current Found Location</string>
+    <string name="navTitle">Designed by Venkata</string>
 </resources>
