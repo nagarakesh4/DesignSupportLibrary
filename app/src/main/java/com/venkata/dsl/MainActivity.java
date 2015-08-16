@@ -31,13 +31,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setupFab();
 
         //set the tabs
-        setupTabs();
+        //setupTabs();
     }
 
     public void setupToolBar() {
         mToolbar = (Toolbar) findViewById(R.id.toolBar);
         setSupportActionBar(mToolbar);
-
+        mToolbar.setTitle("Designed by Venkata");
+        mToolbar.setTitleTextColor(2);
         //show menu icon
         final ActionBar mActionBar = getSupportActionBar();
         mActionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
@@ -49,13 +50,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mFloatingActionButton.setOnClickListener(this);
     }
 
-    public void setupTabs(){
+    /*public void setupTabs(){
         mTabLayout = (TabLayout) findViewById(R.id.tabLayout);
         mTabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
         mTabLayout.addTab(mTabLayout.newTab().setText("Movies"));
         mTabLayout.addTab(mTabLayout.newTab().setText("Notes"));
         mTabLayout.addTab(mTabLayout.newTab().setText("Storage"));
-    }
+    }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -83,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         if(view.getId() == R.id.fab){
             Snackbar.make(
-                    findViewById(R.id.rootLayout),
+                    findViewById(R.id.coordinatorLayout),
                     "You have clicked on fab to see this text on snack bar",
                     Snackbar.LENGTH_LONG).
                     setAction("Action", this)
